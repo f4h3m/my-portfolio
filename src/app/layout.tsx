@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
+import DotPattern from "@/components/magicui/dot-pattern";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -57,13 +58,25 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body
         className={cn(
-          "min-h-screen bg-background font-sans antialiased max-w-2xl mx-auto py-12 sm:py-24 px-6",
+          "min-h-screen bg-background font-sans antialiased py-12 sm:py-24 px-6",
           fontSans.variable
         )}
       >
-        <ThemeProvider attribute="class" defaultTheme="light">
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
-            {children}
+            <div className="max-w-2xl mx-auto">{children}</div>
+            <div className="absolute top-0 left-0 -z-10 flex h-full w-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl">
+              <DotPattern
+                width={20}
+                height={20}
+                cx={1}
+                cy={1}
+                cr={1}
+                className={cn(
+                  "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
+                )}
+              />
+            </div>
             <Navbar />
           </TooltipProvider>
         </ThemeProvider>
