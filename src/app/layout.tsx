@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import DotPattern from "@/components/magicui/dot-pattern";
+import Particles from "@/components/magicui/particles";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -66,15 +67,12 @@ export default function RootLayout({
           <TooltipProvider delayDuration={0}>
             <div className="max-w-2xl mx-auto">{children}</div>
             <div className="absolute top-0 left-0 -z-10 flex h-full w-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl">
-              <DotPattern
-                width={20}
-                height={20}
-                cx={1}
-                cy={1}
-                cr={1}
-                className={cn(
-                  "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] "
-                )}
+              <Particles
+                className="absolute inset-0"
+                quantity={200}
+                ease={80}
+                color={"#ffff"}
+                refresh
               />
             </div>
             <Navbar />

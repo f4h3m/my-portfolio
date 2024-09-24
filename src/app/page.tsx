@@ -1,6 +1,7 @@
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
+import { BorderBeam } from "@/components/magicui/border-beam";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -8,7 +9,6 @@ import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import Link from "next/link";
 import Markdown from "react-markdown";
-
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
@@ -17,9 +17,9 @@ export default function Page() {
       <main className="flex flex-col min-h-[100dvh] space-y-10">
         <section id="hero">
           <div className="mx-auto w-full max-w-2xl space-y-8">
-            <div className="gap-4 flex justify-between">
+            <div className="gap-4 flex justify-between relative items-center">
               <BlurFade delay={BLUR_FADE_DELAY}>
-                <Avatar className="size-28 border">
+                <Avatar className="size-28 border-4 border-white/20">
                   <AvatarImage alt={DATA.name} src={DATA.avatarUrl} />
                   <AvatarFallback>{DATA.initials}</AvatarFallback>
                 </Avatar>
@@ -32,11 +32,13 @@ export default function Page() {
                     yOffset={8}
                     text={`Hi, I'm ${DATA.name}`}
                   />
-                  <div className="relative ml-4">
-                    <span className="wave vinline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
-                      👋
-                    </span>
-                  </div>
+                  <BlurFade delay={BLUR_FADE_DELAY}>
+                    <div className="relative ml-4 pb-4">
+                      <span className="wave vinline-block text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none">
+                        👋
+                      </span>
+                    </div>
+                  </BlurFade>
                 </div>
                 <BlurFadeText
                   className="max-w-[600px] md:text-xl"
