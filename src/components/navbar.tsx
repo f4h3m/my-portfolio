@@ -22,7 +22,7 @@ export default function Navbar() {
           duration={12}
           delay={9}
           colorFrom="#ffff"
-          colorTo="#f4f4f4"
+          colorTo="#ccc"
         />
         {DATA.navbar.map((item) => (
           <DockIcon key={item.href}>
