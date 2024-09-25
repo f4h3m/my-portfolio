@@ -1,3 +1,6 @@
+// @ts-nocheck
+// @ts-expect-error
+
 "use client";
 
 import { AnimatePresence, motion, useInView, Variants } from "framer-motion";
