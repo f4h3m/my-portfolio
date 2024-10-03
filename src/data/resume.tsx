@@ -92,8 +92,8 @@ export const DATA = {
       href: "#",
       degree: "BSc in Computer Science and Engineering",
       logoUrl: "/daffodil.jpg",
-      start: "2023",
-      end: "2024",
+      start: "2013",
+      end: "2017",
     },
   ],
   projects: [
