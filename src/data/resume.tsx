@@ -63,6 +63,17 @@ export const DATA = {
 
   work: [
     {
+      company: "Upwork",
+      href: "#",
+      badges: [],
+      location: "Remote",
+      title: "Freelance Web Developer",
+      logoUrl: "/upwork.png",
+      start: "October 2024",
+      end: "Present",
+      description: "",
+    },
+    {
       company: "WordSphere",
       href: "#",
       badges: [],
@@ -70,7 +81,7 @@ export const DATA = {
       title: "Senior Web Developer",
       logoUrl: "/ws.jpeg",
       start: "May 2020",
-      end: "Present",
+      end: "October 2024",
       description: "",
     },
     {
