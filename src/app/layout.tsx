@@ -4,7 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
-import { Inter as FontSans } from "next/font/google";
+import { Outfit as FontSans } from "next/font/google";
 import "./globals.css";
 import Particles from "@/components/magicui/particles";
 import { Analytics } from "@vercel/analytics/react";
@@ -63,17 +63,19 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
+        <div className="fixed top-0 left-0 -z-10 h-screen w-screen overflow-hidden">
+          <Particles
+            className="absolute inset-0 h-full w-full"
+            quantity={500}
+            ease={180}
+            color={"#ffff"}
+            refresh
+          />
+        </div>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <TooltipProvider delayDuration={0}>
-            <div className="max-w-2xl mx-auto">{children}</div>
-            <div className="absolute top-0 left-0 -z-10 flex h-full w-full items-center justify-center overflow-hidden bg-background p-20 md:shadow-xl">
-              <Particles
-                className="absolute inset-0"
-                quantity={200}
-                ease={80}
-                color={"#ffff"}
-                refresh
-              />
+            <div className="max-w-2xl mx-auto">
+              {children}
             </div>
             <Navbar />
           </TooltipProvider>
