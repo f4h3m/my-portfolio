@@ -9,7 +9,7 @@ export const DATA = {
   locationLink: "https://www.google.com/maps/place/dinajpur",
   description: "Love building things and helping people.",
   summary:
-    "with 6+ years of expertise in crafting dynamic and user-friendly web applications. Proficient in a variety of modern frameworks, including React, Next.js, Vue, and Svelte, as well as WordPress. Skilled in delivering high-quality web solutions that meet client requirements and exceed expectations.",
+    "with 7+ years of expertise in crafting dynamic and user-friendly web applications. Proficient in a variety of modern frameworks, including React, Next.js, Vue, and Svelte, as well as WordPress. Skilled in delivering high-quality web solutions that meet client requirements and exceed expectations.",
   avatarUrl: "/me.jpg",
   skills: [
     "PHP",
